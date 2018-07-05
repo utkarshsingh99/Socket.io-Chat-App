@@ -21,7 +21,17 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log(`Connection broken`);
+  });
+
+  socket.on('createMessage', (message) => {
+    console.log(`Message received:\n ${message.text} SENT BY ${message.from}`);
   })
+
+  socket.emit('newMessage', {
+    text: `Something Just Like This`,
+    from: `Abhinav`,
+    createdAt: 123
+  });
 });
 
 server.listen(port, () => {
