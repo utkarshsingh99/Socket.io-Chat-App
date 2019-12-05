@@ -7,12 +7,24 @@
     <title>Chat App</title>
   </head>
 <body class="chat">
-
+<!-- <div class="an-room" style="bottom: 0; position: absolute;">
+      <form action="chat.html">
+        <div class="form-field">
+          <input type="text" name="name" readonly id="name" style="display: none;" value="">
+          <input type="text" name="room">
+          <button>Join</button>
+        </div>
+      </form>
+    </div> -->
   <div class="chat__sidebar">
     <h3>People</h3>
     <div id="users"></div>
+    <form action="chat.html" style="bottom: 0; position: absolute; max-width: 260px;">
+      <input type="text" autocomplete="off" placeholder="Join Another Room" name="room"/>
+      <input type="text" name="name" readonly id="name" style="display: none;" value="">
+      <button class="submit">Submit</button>
+    </form>
   </div>
-
   <div class="chat__main">
     <ol id="messageList" class="chat__messages"></ol>
 

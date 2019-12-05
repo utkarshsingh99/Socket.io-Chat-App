@@ -1,8 +1,8 @@
-[{
-  id: '/#12poiajdspfoif',
-  name: 'Andrew',
-  room: 'The Office Fans'
-}]
+// [{
+//   id: '/#12poiajdspfoif',
+//   name: 'Andrew',
+//   room: 'The Office Fans'
+// }]
 
 // addUser(id, name, room)
 // removeUser(id)
@@ -21,7 +21,6 @@ class Users {
   removeUser(id) {
     var user = this.users.filter((user) => user.id === id)[0];
     this.users.splice( this.users.indexOf(user), 1);
-    console.log(this.users);
     return user;
   }
   getUser (id) {
